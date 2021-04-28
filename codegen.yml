@@ -2,7 +2,7 @@ overwrite: true
 schema:
   - https://graphql.fauna.com/graphql:
       headers:
-        Authorization: Bearer fnAEHqRN9GACAR_sSGQO8_dK_JqIiMCxy9q3FxKO
+        Authorization: Bearer ${FAUNA_SECRET}
 documents:
  - "src/graphql/**/*.graphql"
 generates:

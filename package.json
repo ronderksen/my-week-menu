@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "gen": "graphql-codegen --config codegen.yml"
+    "gen": "graphql-codegen -r dotenv/config --config codegen.yml"
   },
   "keywords": [],
   "author": "",

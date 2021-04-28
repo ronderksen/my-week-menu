@@ -6,7 +6,7 @@
       "Default GraphQL Endpoint": {
         "url": "https://graphql.fauna.com/graphql",
         "headers": {
-          "Authorization": "Bearer fnAEHqRN9GACAR_sSGQO8_dK_JqIiMCxy9q3FxKO"
+          "Authorization": "Bearer ${env:FAUNA_SECRET}"
         },
         "introspect": true
       }
