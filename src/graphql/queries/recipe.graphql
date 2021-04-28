@@ -1,0 +1,17 @@
+query GetRecipe($term: String!) {
+  findRecipeByName(term: $term) {
+    data {
+      name
+      ingredients {
+        data {
+          product {
+            name
+          }
+          unit
+          amount
+        }
+      }
+      steps
+    }
+  }
+}

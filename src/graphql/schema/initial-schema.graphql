@@ -1,0 +1,30 @@
+enum Unit {
+  Piece,
+  Pack,
+  Milliliter,
+  Gram
+}
+
+type Product {
+  name: String! @unique
+}
+
+type Ingredient {
+  product: Product @relation
+  recipe: Recipe @relation
+  amount: Int!
+  unit: Unit!
+}
+
+type Recipe {
+  name: String! @unique
+  ingredients: [Ingredient!]! @relation
+  steps: [String!]!
+}
+
+type Query {
+  allRecipes: [Recipe!]
+  allProducts: [Product!]
+  findRecipeByName(term:String!): Recipe @resolver(name: "findRecipeByName", paginated: true)
+  findProductByName(term:String!): Product @resolver(name: "findProductByName", paginated: true)
+}

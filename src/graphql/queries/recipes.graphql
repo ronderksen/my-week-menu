@@ -1,0 +1,18 @@
+query GetRecipes($size: Int! = 10, $cursor: String) {
+  allRecipes(_size:$size, _cursor: $cursor) {
+    data {
+      _id
+      name
+      ingredients {
+        data {
+          amount
+          unit
+          product {
+            name
+          }
+        }
+      }
+      steps
+    }
+  }
+}

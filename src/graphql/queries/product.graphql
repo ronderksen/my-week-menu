@@ -1,0 +1,8 @@
+query GetProduct($term:String!) {
+  findProductByName(term:$term) {
+    data {
+      _id
+      name
+    }
+  }
+}

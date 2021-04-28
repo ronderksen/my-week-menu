@@ -1,0 +1,8 @@
+query GetProducts($size: Int! = 10, $cursor: String) {
+  allProducts(_size:$size, _cursor: $cursor) {
+    data {
+      _id
+      name
+    }
+  }
+}
